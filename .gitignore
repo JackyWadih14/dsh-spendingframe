@@ -110,7 +110,7 @@ dist
 # Serverless directories
 .serverless/
 
-# FuseBox cache
+# FuseBox cache directory
 .fusebox/
 
 # DynamoDB Local files
@@ -147,3 +147,14 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# --- DSHBalance ---------------------------------------------------------
+# 本地临时目录（asar 解包、抓取中间产物等）
+.tmp*/
+tmp/
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

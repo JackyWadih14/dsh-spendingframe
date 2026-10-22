@@ -1,0 +1,57 @@
+{
+  "name": "dshbalance",
+  "version": "0.2.1",
+  "private": true,
+  "description": "DSHBalance：DSH 插件，在会话输入框下方、上下文占用右侧显示 DeepSeek API 高峰/空闲状态、会话消耗（含子智能体）与今日花费。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackyWadih14/DSHB.git"
+  },
+  "homepage": "https://github.com/JackyWadih14/DSHB#readme",
+  "bugs": {
+    "url": "https://github.com/JackyWadih14/DSHB/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "plugin",
+    "token-usage",
+    "cost"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node tests/balance-probe.mjs && node tests/client-harness-test.mjs",
+    "test:real": "node tests/balance-probe.mjs --real && node tests/client-harness-test.mjs"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "client",
+    "tests",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}
