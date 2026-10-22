@@ -1,5 +1,5 @@
 /**
- * DSHBalance 客户端半（包名 dshbalance，手写的 __ModuleLoader__ 工厂包，无需构建步骤）。
+ * DSHBalance 客户端半（包名 dsh-spendingframe，手写的 __ModuleLoader__ 工厂包，无需构建步骤）。
  *
  * 作用：在会话输入框下沿的 `conversation.composer.dock`（“上下文占用”那一行）
  * 追加一个条目，排在上下文占用右侧，从左到右显示：
@@ -18,7 +18,7 @@
  * 自己的 token，因此跟随主题与字体设置。
  */
 window.__ModuleLoader__.load({
-  id: 'dshbalance',
+  id: 'dsh-spendingframe',
   factory: (require) => {
     const module = { exports: {} }
     const exports = module.exports
@@ -34,13 +34,13 @@ window.__ModuleLoader__.load({
     }
 
     /** 客户端插件名（与 cordis 的 name 一致）。 */
-    const name = 'dshbalance'
+    const name = 'dsh-spendingframe'
     /** 只依赖插槽服务。 */
     const inject = ['slots']
     /** 刷新间隔：5 分钟。 */
     const REFRESH_MS = 5 * 60 * 1000
     /** 宿主路由。 */
-    const ROUTE = '/dshbalance/summary'
+    const ROUTE = '/dsh-spendingframe/summary'
     /** 悬停多久后浮出小气泡（原生 ContextMeter 的 Tooltip 用的是 delayMs: 200）。 */
     const HOVER_DELAY_MS = 200
     /** 距锚点 8px、距视口边缘 12px（原生 useAnchoredPosition 同值）。 */

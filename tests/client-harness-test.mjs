@@ -1,4 +1,4 @@
-// Functional harness for the dshbalance client half.
+// Functional harness for the dsh-spendingframe client half.
 //
 // It loads the hand-written __ModuleLoader__ bundle with a fake loader, a fake
 // react (stateful useState/useRef, effects that actually run), a fake
@@ -147,7 +147,7 @@ function resetHooks(payload, open = false, hovered = false, stale = false) {
 // --- fake loader ----------------------------------------------------------
 await import(pathToFileURL(clientPath).href)
 check('loader received a definition', definition !== null, true)
-check('bundle id', definition.id, 'dshbalance')
+check('bundle id', definition.id, 'dsh-spendingframe')
 
 const requireShim = (id) => {
   if (id === 'react') return React
@@ -155,7 +155,7 @@ const requireShim = (id) => {
   throw new Error(`unexpected require(${id})`)
 }
 const mod = definition.factory(requireShim)
-check('exports.name', mod.name, 'dshbalance')
+check('exports.name', mod.name, 'dsh-spendingframe')
 check('exports.inject', mod.inject, ['slots'])
 check('apply is a function', typeof mod.apply, 'function')
 
@@ -212,7 +212,7 @@ function textOf(node) {
 
 // --- canned payloads ------------------------------------------------------
 const peakPayload = {
-  ok: true, at: Date.parse('2026-10-12T02:00:00Z'), peak: true, window: '高峰时段', version: '0.2.1',
+  ok: true, at: Date.parse('2026-10-12T02:00:00Z'), peak: true, window: '高峰时段', version: '0.2.2',
   session: {
     cost: 0.434705, calls: 60,
     own: { cost: 0.3, calls: 57, tokens: { hit: 120000, miss: 4000, out: 900 } },
@@ -301,7 +301,7 @@ check('subagent row', rowMap['子智能体消耗'], '¥0.135（2 个会话 / 3 �
 check('today row', rowMap['今日消耗'], '¥1.21（2 个会话 / 91 次调用）')
 check('own token row', rowMap['本会话 Token'], '命中 120K / 未命中 4K / 输出 900')
 check('model row', rowMap['模型'], 'deepseek-flash ¥0.435（60 次）')
-contains('panel footer carries the version', textOf(footer), 'DSHBalance v0.2.1')
+contains('panel footer carries the version', textOf(footer), 'DSHBalance v0.2.2')
 check('panel carries the full breakdown, not just the hover lines', [panelText.includes('今日消耗'), panelText.includes('计费时段'), panelText.includes('统计更新时间')], [true, true, true])
 
 // --- 4. dismissal ---------------------------------------------------------

@@ -1,6 +1,6 @@
 {
-  "name": "dshbalance",
-  "version": "0.2.1",
+  "name": "dsh-spendingframe",
+  "version": "0.2.2",
   "description": "DSHBalance：DSH 插件，在会话输入框下方、上下文占用右侧显示 DeepSeek API 高峰/空闲状态、会话消耗（含子智能体）与今日花费。",
   "license": "MIT",
   "publishConfig": {
