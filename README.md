@@ -27,7 +27,7 @@ right next to DSH's context usage pill.
 - **今日花费**：北京时间自然日内的全部会话合计。
 - **跟随宿主**：颜色、字号、字体全部取用 DSH 自己的设计 token，跟随主题与字号设置。
 - **原生手感**：与同排的「上下文使用情况」同一套交互 —— 悬停出小气泡，点击出完整明细。
-- **零配置**：装好即用，每 5 分钟自动刷新，也随页面重新加载立即刷新。
+- **零配置**：装好即用，每分钟自动刷新，也随页面重新加载立即刷新。
 
 ## 交互
 
@@ -175,7 +175,7 @@ right next to DSH's context usage pill.
 ```json
 {
   "ok": true, "at": 1791697077790, "peak": false, "window": "空闲时段",
-  "nextChangeInMs": 69721543, "version": "0.2.3",
+  "nextChangeInMs": 69721543, "version": "0.2.4",
   "session": {
     "found": true, "id": "session-79fa1914-…", "cost": 1.611052, "calls": 112,
     "tokens": { "hit": 12345, "miss": 6789, "out": 4321 }, "lastAt": 1791697070000,
@@ -218,6 +218,7 @@ npm run test:real # 额外读本机会话日志，断言真实血缘与金额（
 | 0.2.1 | 悬停只显示两项消耗与统计时间，完整明细改为点击弹出，对齐原生「上下文使用情况」；悬停延迟、明细色块等细节与原生一致 |
 | 0.2.2 | 发布到 npm：包名改为 `dsh-spendingframe`（原 `dshbalance` 被 npm 判定与已有的 `dsh-balance` 过于相似），只读路由随之改为 `/dsh-spendingframe/summary` |
 | 0.2.3 | 名字全仓统一为 `dsh-spendingframe`：源码目录、README 标题、面板页脚、日志前缀不再使用旧品牌名 |
+| 0.2.4 | 刷新间隔由 5 分钟缩短到 1 分钟（数据源是本地会话日志，落盘即带用量，所以缩短间隔真的能更快看到变化） |
 
 ## 许可
 

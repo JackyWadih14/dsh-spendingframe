@@ -37,8 +37,14 @@ window.__ModuleLoader__.load({
     const name = 'dsh-spendingframe'
     /** 只依赖插槽服务。 */
     const inject = ['slots']
-    /** 刷新间隔：5 分钟。 */
-    const REFRESH_MS = 5 * 60 * 1000
+    /**
+     * 刷新间隔：1 分钟。
+     *
+     * 数据源是本地会话日志（`session.v4.jsonl.zstd`），每条 `assistant/message`
+     * 一落盘就带着 usage，所以这里只受轮询间隔限制；DeepSeek 开放平台账单页那个
+     * 「可能延迟 5 分钟」说的是它自己的统计服务，与本插件无关。
+     */
+    const REFRESH_MS = 60 * 1000
     /** 宿主路由。 */
     const ROUTE = '/dsh-spendingframe/summary'
     /** 悬停多久后浮出小气泡（原生 ContextMeter 的 Tooltip 用的是 delayMs: 200）。 */
