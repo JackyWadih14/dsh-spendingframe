@@ -63,7 +63,7 @@ console.log('周一 17:00 距下一次切换 =', msUntilNextChange(bj('2026-10-1
 // --- 版本号与 package.json 一致 -------------------------------------------
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
 check('VERSION 与 package.json 一致', VERSION, pkg.version)
-check('package.json 已是 v0.2.2', pkg.version, '0.2.2')
+check('package.json 已是 v0.2.3', pkg.version, '0.2.3')
 
 // --- 本机真实数据（--real 才跑）-------------------------------------------
 const now = Date.now()

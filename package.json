@@ -1,6 +1,6 @@
 {
   "name": "dsh-spendingframe",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "dsh-spendingframe：DSH 插件，在会话输入框下方、上下文占用右侧显示 DeepSeek API 高峰/空闲状态、会话消耗（含子智能体）与今日花费。",
   "license": "MIT",
   "publishConfig": {
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JackyWadih14/DSHSF.git"
+    "url": "git+https://github.com/JackyWadih14/dsh-spendingframe.git"
   },
-  "homepage": "https://github.com/JackyWadih14/DSHSF#readme",
+  "homepage": "https://github.com/JackyWadih14/dsh-spendingframe#readme",
   "bugs": {
-    "url": "https://github.com/JackyWadih14/DSHSF/issues"
+    "url": "https://github.com/JackyWadih14/dsh-spendingframe/issues"
   },
   "keywords": [
     "dsh",

@@ -60,12 +60,12 @@ right next to DSH's context usage pill.
 
 ### 方式一：从 npm 安装（推荐）
 
-在 DSH 的插件管理里安装 `dsh-spendingframe`（版本 `^0.2.2`）；或者手工编辑当前 profile
+在 DSH 的插件管理里安装 `dsh-spendingframe`（版本 `^0.2.3`）；或者手工编辑当前 profile
 （`<DSH_HOME>/profiles/<profile>/package.json`）：
 
 ```jsonc
 {
-  "dependencies": { "dsh-spendingframe": "^0.2.2" },
+  "dependencies": { "dsh-spendingframe": "^0.2.3" },
   "dsh": { "profile": { "bundles": [/* …已有的 bundle… */, "dsh-spendingframe"] } }
 }
 ```
@@ -77,7 +77,7 @@ right next to DSH's context usage pill.
 1. 克隆仓库到任意目录（目录名随意，下文用 `<插件目录>` 指代）：
 
    ```sh
-   git clone https://github.com/JackyWadih14/DSHSF.git dsh-spendingframe
+   git clone https://github.com/JackyWadih14/dsh-spendingframe.git dsh-spendingframe
    ```
 2. 在 DSH 的插件管理里以**本地目录**安装它；或者把上面那段 `dependencies` 改成
    `{ "dsh-spendingframe": "file:<本目录的绝对路径>" }` 再 `pnpm install`。
@@ -175,7 +175,7 @@ right next to DSH's context usage pill.
 ```json
 {
   "ok": true, "at": 1791697077790, "peak": false, "window": "空闲时段",
-  "nextChangeInMs": 69721543, "version": "0.2.2",
+  "nextChangeInMs": 69721543, "version": "0.2.3",
   "session": {
     "found": true, "id": "session-79fa1914-…", "cost": 1.611052, "calls": 112,
     "tokens": { "hit": 12345, "miss": 6789, "out": 4321 }, "lastAt": 1791697070000,
@@ -217,6 +217,7 @@ npm run test:real # 额外读本机会话日志，断言真实血缘与金额（
 | 0.2.0 | 子智能体会话的花费并入父会话；悬停高亮与原生条目一致 |
 | 0.2.1 | 悬停只显示两项消耗与统计时间，完整明细改为点击弹出，对齐原生「上下文使用情况」；悬停延迟、明细色块等细节与原生一致 |
 | 0.2.2 | 发布到 npm：包名改为 `dsh-spendingframe`（原 `dshbalance` 被 npm 判定与已有的 `dsh-balance` 过于相似），只读路由随之改为 `/dsh-spendingframe/summary` |
+| 0.2.3 | 名字全仓统一为 `dsh-spendingframe`：源码目录、README 标题、面板页脚、日志前缀不再使用旧品牌名 |
 
 ## 许可
 
