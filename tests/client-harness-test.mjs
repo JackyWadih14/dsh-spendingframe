@@ -301,7 +301,7 @@ check('subagent row', rowMap['子智能体消耗'], '¥0.135（2 个会话 / 3 �
 check('today row', rowMap['今日消耗'], '¥1.21（2 个会话 / 91 次调用）')
 check('own token row', rowMap['本会话 Token'], '命中 120K / 未命中 4K / 输出 900')
 check('model row', rowMap['模型'], 'deepseek-flash ¥0.435（60 次）')
-contains('panel footer carries the version', textOf(footer), 'DSHBalance v0.2.2')
+contains('panel footer carries the version', textOf(footer), 'dsh-spendingframe v0.2.2')
 check('panel carries the full breakdown, not just the hover lines', [panelText.includes('今日消耗'), panelText.includes('计费时段'), panelText.includes('统计更新时间')], [true, true, true])
 
 // --- 4. dismissal ---------------------------------------------------------

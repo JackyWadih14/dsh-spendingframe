@@ -1,4 +1,4 @@
-# DSHBalance
+# dsh-spendingframe
 
 [![npm](https://img.shields.io/npm/v/dsh-spendingframe?label=npm)](https://www.npmjs.com/package/dsh-spendingframe)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -77,7 +77,7 @@ right next to DSH's context usage pill.
 1. 克隆仓库到任意目录（目录名随意，下文用 `<插件目录>` 指代）：
 
    ```sh
-   git clone https://github.com/JackyWadih14/DSHSF.git DSHBalance
+   git clone https://github.com/JackyWadih14/DSHSF.git dsh-spendingframe
    ```
 2. 在 DSH 的插件管理里以**本地目录**安装它；或者把上面那段 `dependencies` 改成
    `{ "dsh-spendingframe": "file:<本目录的绝对路径>" }` 再 `pnpm install`。

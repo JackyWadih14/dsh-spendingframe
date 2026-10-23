@@ -1,5 +1,5 @@
 /**
- * DSHBalance 客户端半（包名 dsh-spendingframe，手写的 __ModuleLoader__ 工厂包，无需构建步骤）。
+ * dsh-spendingframe 客户端半（手写的 __ModuleLoader__ 工厂包，无需构建步骤）。
  *
  * 作用：在会话输入框下沿的 `conversation.composer.dock`（“上下文占用”那一行）
  * 追加一个条目，排在上下文占用右侧，从左到右显示：
@@ -351,7 +351,7 @@ window.__ModuleLoader__.load({
             .catch((error) => {
               if (!alive) return
               setStale(true)
-              console.warn('[DSHBalance] 读取失败：', error)
+              console.warn('[dsh-spendingframe] 读取失败：', error)
             })
         }
         load()
@@ -480,7 +480,7 @@ window.__ModuleLoader__.load({
             )),
           ),
           typeof data.version === 'string' && data.version !== ''
-            ? React.createElement('div', { style: panelFooterStyle }, `DSHBalance v${data.version}`)
+            ? React.createElement('div', { style: panelFooterStyle }, `dsh-spendingframe v${data.version}`)
             : null,
         ))
         : null
